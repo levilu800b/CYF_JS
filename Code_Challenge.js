@@ -42,56 +42,112 @@
 //     return votes.upvotes - votes.downvotes;
 // }
 
-// You are given an array of positive and negative integers and a number n and n > 1. The array may have elements that occurs more than once. Find all the combinations of n elements of the array that their sum are 0.
+// Description:
 
-// arr = [1, -1, 2, 3, -2]
-// n = 3
-// find_zero_sum_groups(arr, n) == [-2, -1, 3] # -2 - 1 + 3 = 0
-// The function should ouput every combination or group in increasing order.
+// Write a function that accepts an array of 10 integers (between 0 and 9), that returns a string of those numbers in the form of a phone number.
 
-// We may have more than one group:
+// Example
+// createPhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]) // => returns "(123) 456-7890"
+// The returned format must be correct in order to complete this challenge.
 
-// arr = [1, -1, 2, 3, -2, 4, 5, -3 ]
-// n = 3
-// find_zero_sum_groups(arr, n) == [[-3, -2, 5], [-3, -1, 4], [-3, 1, 2], [-2, -1, 3]]
-// In the case above the function should output a sorted 2D array.
+// Don't forget the space after the closing parentheses!
 
-// The function will not give a group twice, or more, only once.
+// Solution:
 
-// arr = [1, -1, 2, 3, -2, 4, 5, -3, -3, -1, 2, 1, 4, 5, -3 ]
-// n = 3
-// find_zero_sum_groups(arr, n) == [[-3, -2, 5], [-3, -1, 4], [-3, 1, 2], [-2, -1, 3]]
-// If there are no combinations with sum equals to 0, the function will output an alerting message.
+// function createPhoneNumber(numbers) {
+//     let num = numbers.join('');
+//     return `(${num.slice(0, 3)}) ${num.slice(3, 6)}-${num.slice(6)}`;
+// }
 
-// arr = [1, 1, 2, 3]
-// n = 2
-// find_zero_sum_groups(arr, n) == "No combinations"
-// If the function receives an empty array will output an specific alert:
+// DESCRIPTION:
 
-// arr = []
-// n = 2
-// find_zero_sum_groups(arr, n) == "No elements to combine"
+// Write an algorithm that takes an array and moves all of the zeros to the end, preserving the order of the other elements.
 
-// function find_zero_sum_groups(arr, n) {
-//     //your code here
-//     let result = [];
-//     let sum = 0;
-//     let temp = [];
-//     if (arr.length === 0) {
-//         return 'No elements to combine';
-//     } else if (n > arr.length) {
-//         return 'No combinations';
+// moveZeros([false,1,0,1,2,0,1,3,"a"]) // returns[false,1,1,2,1,3,"a",0,0]
+
+// Solution:
+
+// function moveZeros(arr) {
+//     return arr.filter((x) => x !== 0).concat(arr.filter((x) => x === 0));
+// }
+
+// DESCRIPTION:
+// Story
+// Jumbo Juice makes a fresh juice out of fruits of your choice.Jumbo Juice charges $5 for regular fruits and $7 for special ones. Regular fruits are Banana, Orange, Apple, Lemon and Grapes. Special ones are Avocado, Strawberry and Mango. Others fruits that are not listed are also available upon request. Those extra special fruits cost $9 per each. There is no limit on how many fruits she/he picks.The price of a cup of juice is the mean of price of chosen fruits. In case of decimal number (ex. $5.99), output should be the nearest integer (use the standard rounding function of your language of choice).
+
+// Input
+// The function will receive an array of strings, each with the name of a fruit. The recognition of names should be case insensitive. There is no case of an empty array input.
+
+// Example
+// ['Mango', 'Banana', 'Avocado'] //the price of this juice bottle is (7+5+7)/3 = $6($6.333333...)
+
+// Solution:
+
+// function mixFruit(arr) {
+//     let price = 0;
+//     arr.forEach((x) => {
+//         if (x.toLowerCase() === 'banana' || x.toLowerCase() === 'orange' || x.toLowerCase() === 'apple' || x.toLowerCase() === 'lemon' || x.toLowerCase() === 'grapes') {
+//             price += 5;
+//         } else if (x.toLowerCase() === 'avocado' || x.toLowerCase() === 'strawberry' || x.toLowerCase() === 'mango') {
+//             price += 7;
+//         } else {
+//             price += 9;
+//         }
+//     });
+//     return Math.round(price / arr.length);
+// }
+
+// DESCRIPTION:
+// Given a list of integers values, your job is to return the sum of the values; however, if the same integer value appears multiple times in the list, you can only count it once in your sum.
+
+// For example:
+
+// [ 1, 2, 3] ==> 6
+
+// [ 1, 3, 8, 1, 8] ==> 12
+
+// [ -1, -1, 5, 2, -7] ==> -1
+
+// [] ==> null
+
+// Solution:
+
+// function uniqueSum(lst) {
+// 	//your magic code goes here
+//     // expected null
+//     if (lst.length === 0) {
+//         return null;
 //     } else {
-//         for (let i = 0; i < arr.length; i++) {
-//             for (let j = i + 1; j < arr.length; j++) {
-//                 for (let k = j + 1; k < arr.length; k++) {
-//                     if (arr[i] + arr[j] + arr[k] === 0) {
-//                         temp.push(arr[i], arr[j], arr[k]);
-//                         result.push(temp);
-//                         temp = [];
-//                     }
-//                 }
+//         let sum = 0;
+//         let unique = [];
+//         lst.forEach((x) => {
+//             if (!unique.includes(x)) {
+//                 unique.push(x);
+//                 sum += x;
 //             }
+//         });
+//         return sum;
+//     }
+// }
+
+// DESCRIPTION:
+// Here's another staple for the functional programmer. You have a sequence of values and some predicate for those values. You want to get the longest prefix of elements such that the predicate is true for each element. We'll call this the takeWhile function. It accepts two arguments. The first is the sequence of values, and the second is the predicate function. The function does not change the value of the original sequence.
+
+// Example:
+// sequence : [2,4,6,8,1,2,5,4,3,2]
+// predicate: is an even number
+// result   : [2,4,6,8]
+// Your task is to implement the takeWhile function.
+
+// Solution:
+
+// function takeWhile(arr, pred) {
+//     let result = [];
+//     for (let i = 0; i < arr.length; i++) {
+//         if (pred(arr[i])) {
+//             result.push(arr[i]);
+//         } else {
+//             break;
 //         }
 //     }
 //     return result;
