@@ -95,73 +95,73 @@
 // // Find a destination name reachable by ferry.
 // // Print in the console all the destination names more than 300 kms far away and reachable by train.
 
-// let destination1 = {
-// 	destinationName: 'Edinburgh',
-// 	distanceKms: 80,
-// 	transportations: ['car', 'bus', 'train'],
-// };
+let destination1 = {
+	destinationName: 'Edinburgh',
+	distanceKms: 80,
+	transportations: ['car', 'bus', 'train'],
+};
 
-// let destination2 = {
-// 	destinationName: 'London',
-// 	distanceKms: 650,
-// 	transportations: ['car', 'bus', 'train'],
-// };
+let destination2 = {
+	destinationName: 'London',
+	distanceKms: 650,
+	transportations: ['car', 'bus', 'train'],
+};
 
-// let destination3 = {
-// 	destinationName: 'Paris',
-// 	distanceKms: 900,
-// 	transportations: ['train', 'plane'],
-// };
+let destination3 = {
+	destinationName: 'Paris',
+	distanceKms: 900,
+	transportations: ['train', 'plane'],
+};
 
-// let destination4 = {
-// 	destinationName: 'Dublin',
-// 	distanceKms: 350,
-// 	transportations: ['plane', 'ferry'],
-// };
+let destination4 = {
+	destinationName: 'Dublin',
+	distanceKms: 350,
+	transportations: ['plane', 'ferry'],
+};
 
-// let travelDestinations = [
-// 	destination1,
-// 	destination2,
-// 	destination3,
-// 	destination4,
-// ];
+let travelDestinations = [
+	destination1,
+	destination2,
+	destination3,
+	destination4,
+];
 
-// /*
-// DO NOT EDIT ANYTHING ABOVE THIS LINE
-// WRITE YOUR CODE BELOW
-// */
+/*
+DO NOT EDIT ANYTHING ABOVE THIS LINE
+WRITE YOUR CODE BELOW
+*/
 
-// // Filter the travelDestinations array to return all destination names reachable within 500 kms
-// let destinationNamesWithin500Kms = travelDestinations
-// 	.filter((destination) => destination.distanceKms < 500)
-// 	.map((destination) => destination.destinationName); // Complete here
+// Filter the travelDestinations array to return all destination names reachable within 500 kms
+let destinationNamesWithin500Kms = travelDestinations
+	.filter((destination) => destination.distanceKms < 500)
+	.map((destination) => destination.destinationName); // Complete here
 
-// // Find a destination name reachable by ferry
-// let destinationNameReachableByFerry = travelDestinations.find((destination) =>
-// 	destination.transportations.includes('ferry'),
-// ).destinationName; // Complete here
+// Find a destination name reachable by ferry
+let destinationNameReachableByFerry = travelDestinations.find((destination) =>
+	destination.transportations.includes('ferry'),
+).destinationName; // Complete here
 
-// // Print in the console all the destination names more than 300 kms far away and reachable by train
-// let destinationNamesMoreThan300KmsAwayByTrain = travelDestinations
-// 	.filter(
-// 		(destination) =>
-// 			destination.distanceKms > 300 &&
-// 			destination.transportations.includes('train'),
-// 	)
-// 	.map((destination) => destination.destinationName); // Complete here (PRINT THE RESULT IN THE CONSOLE USING FOREACH)
-// /*
-// DO NOT EDIT ANYTHING BELOW THIS LINE
-// */
+// Print in the console all the destination names more than 300 kms far away and reachable by train
+let destinationNamesMoreThan300KmsAwayByTrain = travelDestinations
+	.filter(
+		(destination) =>
+			destination.distanceKms > 300 &&
+			destination.transportations.includes('train'),
+	)
+	.map((destination) => destination.destinationName); // Complete here (PRINT THE RESULT IN THE CONSOLE USING FOREACH)
+/*
+DO NOT EDIT ANYTHING BELOW THIS LINE
+*/
 
-// console.log(
-// 	`Question 1) Expected result: Edinburgh,Dublin, actual result: ${destinationNamesWithin500Kms}`,
-// );
-// console.log(
-// 	`Question 2) Expected result: Dublin, actual result: ${destinationNameReachableByFerry}`,
-// );
-// console.log(
-// 	`Question 3) Expected result: London,Paris, actual result: ${destinationNamesMoreThan300KmsAwayByTrain}`,
-// );
+console.log(
+	`Question 1) Expected result: Edinburgh,Dublin, actual result: ${destinationNamesWithin500Kms}`,
+);
+console.log(
+	`Question 2) Expected result: Dublin, actual result: ${destinationNameReachableByFerry}`,
+);
+console.log(
+	`Question 3) Expected result: London,Paris, actual result: ${destinationNamesMoreThan300KmsAwayByTrain}`,
+);
 
 // EXERCISE 3
 
@@ -175,92 +175,92 @@
 
 // Define a method countNumberOfRestaurantsInArea which takes an area of Glasgow in parameter (center, west), and returns the number of restaurants in this area.
 
-let restaurant1 = {
-	name: 'Paesano',
-	totalSeats: 10,
-	numberOfCustomers: 8,
-	address: {
-		city: 'Glasgow',
-		area: 'center',
-	},
-	menu: ['pizza', 'calzone', 'salad'],
-};
+// let restaurant1 = {
+// 	name: 'Paesano',
+// 	totalSeats: 10,
+// 	numberOfCustomers: 8,
+// 	address: {
+// 		city: 'Glasgow',
+// 		area: 'center',
+// 	},
+// 	menu: ['pizza', 'calzone', 'salad'],
+// };
 
-let restaurant2 = {
-	name: 'Ubiquitous Chip',
-	totalSeats: 20,
-	numberOfCustomers: 10,
-	address: {
-		city: 'Glasgow',
-		area: 'west',
-	},
-	menu: ['salad', 'chocolate cake', 'roast lamb'],
-};
+// let restaurant2 = {
+// 	name: 'Ubiquitous Chip',
+// 	totalSeats: 20,
+// 	numberOfCustomers: 10,
+// 	address: {
+// 		city: 'Glasgow',
+// 		area: 'west',
+// 	},
+// 	menu: ['salad', 'chocolate cake', 'roast lamb'],
+// };
 
-let restaurant3 = {
-	name: 'Monkeyz',
-	totalSeats: 15,
-	numberOfCustomers: 8,
-	address: {
-		city: 'Glasgow',
-		area: 'center',
-	},
-	menu: ['stew', 'chocolate cake', 'panini'],
-};
+// let restaurant3 = {
+// 	name: 'Monkeyz',
+// 	totalSeats: 15,
+// 	numberOfCustomers: 8,
+// 	address: {
+// 		city: 'Glasgow',
+// 		area: 'center',
+// 	},
+// 	menu: ['stew', 'chocolate cake', 'panini'],
+// };
 
-let restaurants = [restaurant1, restaurant2, restaurant3];
+// let restaurants = [restaurant1, restaurant2, restaurant3];
 
-// /*
-// DO NOT EDIT ANYTHING ABOVE THIS LINE
-// WRITE YOUR CODE BELOW
-// */
+// // /*
+// // DO NOT EDIT ANYTHING ABOVE THIS LINE
+// // WRITE YOUR CODE BELOW
+// // */
 
-let restaurantFinderApplication = {
-	applicationName: 'Restaurant Finder',
-	applicationVersion: '1.0',
-	restaurants: restaurants,
-	findAvailableRestaurants: function (numberOfPeople) {
-		return this.restaurants
-			.filter(
-				(restaurant) =>
-					restaurant.totalSeats - restaurant.numberOfCustomers >=
-					numberOfPeople,
-			)
-			.map((restaurant) => restaurant.name);
-		// Complete here
-	},
-	findRestaurantServingDish: function (dishName) {
-		return this.restaurants
-			.filter((restaurant) => restaurant.menu.includes(dishName))
-			.map((restaurant) => restaurant.name);
-		// Complete here
-	},
-	countNumberOfRestaurantsInArea: function (area) {
-		return this.restaurants.filter(
-			(restaurant) => restaurant.address.area === area,
-		).length;
-		// Complete here
-	},
-};
+// let restaurantFinderApplication = {
+// 	applicationName: 'Restaurant Finder',
+// 	applicationVersion: '1.0',
+// 	restaurants: restaurants,
+// 	findAvailableRestaurants: function (numberOfPeople) {
+// 		return this.restaurants
+// 			.filter(
+// 				(restaurant) =>
+// 					restaurant.totalSeats - restaurant.numberOfCustomers >=
+// 					numberOfPeople,
+// 			)
+// 			.map((restaurant) => restaurant.name);
+// 		// Complete here
+// 	},
+// 	findRestaurantServingDish: function (dishName) {
+// 		return this.restaurants
+// 			.filter((restaurant) => restaurant.menu.includes(dishName))
+// 			.map((restaurant) => restaurant.name);
+// 		// Complete here
+// 	},
+// 	countNumberOfRestaurantsInArea: function (area) {
+// 		return this.restaurants.filter(
+// 			(restaurant) => restaurant.address.area === area,
+// 		).length;
+// 		// Complete here
+// 	},
+// };
 
-// /*
-// DO NOT EDIT ANYTHING BELOW THIS LINE
-// */
+// // /*
+// // DO NOT EDIT ANYTHING BELOW THIS LINE
+// // */
 
-let restaurantsAvailableFor5People =
-	restaurantFinderApplication.findAvailableRestaurants(5);
-console.log(
-	`Find available restaurants for 5 people: Expected result: Ubiquitous Chip,Monkeyz, actual result: ${restaurantsAvailableFor5People}`,
-);
+// let restaurantsAvailableFor5People =
+// 	restaurantFinderApplication.findAvailableRestaurants(5);
+// console.log(
+// 	`Find available restaurants for 5 people: Expected result: Ubiquitous Chip,Monkeyz, actual result: ${restaurantsAvailableFor5People}`,
+// );
 
-let restaurantsServingSalad =
-	restaurantFinderApplication.findRestaurantServingDish('salad');
-console.log(
-	`Find restaurants serving salad: Expected result: Paesano,Ubiquitous Chip, actual result: ${restaurantsServingSalad}`,
-);
+// let restaurantsServingSalad =
+// 	restaurantFinderApplication.findRestaurantServingDish('salad');
+// console.log(
+// 	`Find restaurants serving salad: Expected result: Paesano,Ubiquitous Chip, actual result: ${restaurantsServingSalad}`,
+// );
 
-let numberOfRestaurantsInCityCentre =
-	restaurantFinderApplication.countNumberOfRestaurantsInArea('center');
-console.log(
-	`Number of restaurants in city centre: Expected result: 2, actual result: ${numberOfRestaurantsInCityCentre}`,
-);
+// let numberOfRestaurantsInCityCentre =
+// 	restaurantFinderApplication.countNumberOfRestaurantsInArea('center');
+// console.log(
+// 	`Number of restaurants in city centre: Expected result: 2, actual result: ${numberOfRestaurantsInCityCentre}`,
+// );
