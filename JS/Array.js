@@ -132,14 +132,28 @@
 
 // Solution:
 
-function flattenAndSort(array) {
-    let newArray = [];
-    for (let i = 0; i < array.length; i++) {
-        for (let j = 0; j < array[i].length; j++) {
-            newArray.push(array[i][j]);
-        }
-    }
-    return newArray.sort((a, b) => a - b);
-}
+// function flattenAndSort(array) {
+//     let newArray = [];
+//     for (let i = 0; i < array.length; i++) {
+//         for (let j = 0; j < array[i].length; j++) {
+//             newArray.push(array[i][j]);
+//         }
+//     }
+//     return newArray.sort((a, b) => a - b);
+// }
 
-console.log(flattenAndSort([[3, 2, 1], [4, 6, 5], [], [9, 7, 8]]));
+// console.log(flattenAndSort([[3, 2, 1], [4, 6, 5], [], [9, 7, 8]]));
+
+// const nestedArr = [[1], [2, 3]];
+ 
+// console.log(nestedArr[1][1]);
+
+// Now, make your own! Create a program that loops from 5 to 10 and logs each number to the console.
+
+const vacationSpots = ['Bali', 'Paris', 'Tulum'];
+
+// Write your code below
+
+for (let i = 0; i < vacationSpots.length; i++) {
+    console.log('I would love to visit ' + vacationSpots[i]);
+}
