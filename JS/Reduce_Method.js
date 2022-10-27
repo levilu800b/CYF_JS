@@ -10,20 +10,20 @@
 
 // Reduce method in an object
 
-var arr = [
-    { name: "John", age: 20 },
-    { name: "Peter", age: 30 },
-    { name: "John", age: 40 },
-    { name: "Peter", age: 50 },
-    { name: "John", age: 60 },
-];
+// var arr = [
+//     { name: "John", age: 20 },
+//     { name: "Peter", age: 30 },
+//     { name: "John", age: 40 },
+//     { name: "Peter", age: 50 },
+//     { name: "John", age: 60 },
+// ];
 
-var sum = arr.reduce(function (a, b) {
-    return a + b.age;
-}
-    , 0);
+// var sum = arr.reduce(function (a, b) {
+//     return a + b.age;
+// }
+//     , 0);
 
-console.log(sum);
+// console.log(sum);
 
 // let array = [100, 200, 300];
 // let sum = 0;

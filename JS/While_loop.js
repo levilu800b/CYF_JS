@@ -67,3 +67,12 @@
 //     currentCard = cards[Math.floor(Math.random() * 4)];
 //     console.log(currentCard);
 //     }
+
+// const chapters = [ 'Prologue', 'Chapter 1', 'Chapter 2', 'Chapter 3', 'Epilogue' ];
+
+// // Write your code below
+// let currentChapter = [];
+// while (currentChapter !== 'Chapter 3') {
+//     currentChapter = chapters[Math.floor(Math.random() * 5)];
+//     console.log(currentChapter);
+//     }
