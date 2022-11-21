@@ -19,3 +19,24 @@
 // }
 
 // console.log(gordon('What feck damn cake'));
+
+// const numbers = [13, 26, 16];
+
+// Object.values(numbers).map(function(num) {
+//     console.log(num * num);
+// })
+
+// const pa = numbers.map(function (num) {
+//     return num * 2;
+// });
+
+// console.log(pa);
+
+var testArray = ["Test"];
+    function testFunction(testArray) {
+     for (var i = 0; i < testArray.length; i++) {
+         console.log(testArray[i]);
+    }
+}
+    
+    testFunction();
