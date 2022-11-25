@@ -26,4 +26,18 @@
 // fs.writeFileSync('result.txt', result);
 
 // run the code
-// node Codility-JS3.js
+
+
+// find the bug(s) and modify one line of code in the incorrect implementation of a function solution that is supposted to return the smallest element of thw given non-empty array A which contains at most 1000 intergers within range [-1000..1000].
+// Notice that for the example test case A = [-1, 1, -2, 2] the attached code is already returning the correct answer (i.e. -2).
+
+function solution(A) {
+    // write your code in JavaScript (Node.js 8.9.4)
+    let min = 1000;
+    for (let i = 0; i < A.length; i++) {
+        if (A[i] < min) {
+            min = A[i];
+        }
+    }
+    return min;
+}
