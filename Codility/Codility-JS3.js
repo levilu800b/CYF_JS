@@ -9,16 +9,18 @@
 // each element of array A is an integer within the range [-10,000..10,000].
 // there is at least one element in array A which satisfies the condition in the task statement.
 
-// function solution(A) {
-// 	// write your code in JavaScript (Node.js 8.9.4)
-// 	let max = -10000;
-// 	for (let i = 0; i < A.length; i++) {
-// 		if (A[i] % 4 === 0 && A[i] > max) {
-// 			max = A[i];
-// 		}
-// 	}
-// 	return max;
-// }
+function solution(A) {
+	// write your code in JavaScript (Node.js 8.9.4)
+	let max = -10000;
+	for (let i = 0; i < A.length; i++) {
+		if (A[i] % 4 === 0 && A[i] > max) {
+			max = A[i];
+		}
+	}
+	return max;
+}
+
+console.log(solution([-6, -91, 1011, -100, 84, -22, 0, 1, 473]));
 
 // // write a txt file for the result of the function
 // const fs = require('fs');
@@ -31,13 +33,13 @@
 // find the bug(s) and modify one line of code in the incorrect implementation of a function solution that is supposted to return the smallest element of thw given non-empty array A which contains at most 1000 intergers within range [-1000..1000].
 // Notice that for the example test case A = [-1, 1, -2, 2] the attached code is already returning the correct answer (i.e. -2).
 
-function solution(A) {
+// function solution(A) {
     // write your code in JavaScript (Node.js 8.9.4)
-    let min = 1000;
-    for (let i = 0; i < A.length; i++) {
-        if (A[i] < min) {
-            min = A[i];
-        }
-    }
-    return min;
-}
+//     let min = 1000;
+//     for (let i = 0; i < A.length; i++) {
+//         if (A[i] < min) {
+//             min = A[i];
+//         }
+//     }
+//     return min;
+// }
