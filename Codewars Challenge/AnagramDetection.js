@@ -12,24 +12,24 @@
 
 // My solution:
 
-// function isAnagram(test, original) {
-// 	return (
-// 		test.toLowerCase().split('').sort().join('') ===
-// 		original.toLowerCase().split('').sort().join('')
-// 	);
-// }
-
-// console.log(isAnagram('foefet', 'toffee'));
-
-// solution 2:
-
 function isAnagram(test, original) {
-	if (test.length !== original.length) {
-		return false;
-	}
-	test = test.toLowerCase().split('').sort().join('');
-	original = original.toLowerCase().split('').sort().join('');
-	return test === original;
+	return (
+		test.toLowerCase().split('').sort().join('') ===
+		original.toLowerCase().split('').sort().join('')
+	);
 }
 
 console.log(isAnagram('foefet', 'toffee'));
+
+// solution 2:
+
+// function isAnagram(test, original) {
+// 	if (test.length !== original.length) {
+// 		return false;
+// 	}
+// 	test = test.toLowerCase().split('').sort().join('');
+// 	original = original.toLowerCase().split('').sort().join('');
+// 	return test === original;
+// }
+
+// console.log(isAnagram('foefet', 'toffee'));
