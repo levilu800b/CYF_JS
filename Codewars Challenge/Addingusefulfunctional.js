@@ -19,3 +19,5 @@ Array.range = function(start, count) {
 Array.prototype.sum = function() {
     return this.reduce(function(a, b) { return a + b; }, 0);
 };
+
+console.log(Array.range(0, 3));
