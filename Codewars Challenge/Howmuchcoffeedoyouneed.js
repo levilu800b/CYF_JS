@@ -16,13 +16,11 @@
 // Each event can be downcase/lowercase, or uppercase. If it is downcase/lowercase you need 1 coffee by events and if it is uppercase you need 2 coffees.
 
 function howMuchCoffee(events) {
-  let count = 0;
-  events.forEach((event) => {
-    if (event === event.toUpperCase()) {
-      count += 2;
-    } else {
-      count += 1;
-    }
-  });
-  return count > 3 ? "You need extra sleep" : count;
+	let count = 0;
+	for (let i = 0; i < events.length; i++) {
+		let e = events[i];
+		if (e === 'cw' || e === 'cat' || e === 'dog' || e === 'movie') count++;
+		if (e === 'CW' || e === 'CAT' || e === 'DOG' || e === 'MOVIE') count += 2;
+	}
+	return count > 3 ? 'You need extra sleep' : count;
 }
