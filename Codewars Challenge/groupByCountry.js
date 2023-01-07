@@ -25,3 +25,24 @@
 // }
 // ```
 
+const groupByCountry = (arr) => {
+    let obj = {};
+    arr.forEach((item) => {
+        if (obj[item.country]) {
+        obj[item.country].push(item.city);
+        } else {
+        obj[item.country] = [item.city];
+        }
+    });
+    return obj;
+    }
+
+console.log(groupByCountry([
+    { country: "Belarus", city: "Brest" },
+    { country: "Russia", city: "Omsk" },
+    { country: "Russia", city: "Samara" },
+    { country: "Belarus", city: "Grodno" },
+    { country: "Belarus", city: "Minsk" },
+    { country: "Poland", city: "Lodz" },
+]));
+
