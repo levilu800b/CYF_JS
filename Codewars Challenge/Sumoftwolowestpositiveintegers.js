@@ -7,9 +7,17 @@
 
 // Hint: Do not modify the original array.
 
-// SOLUTION:
+// SOLUTION 1:
 
 function sumTwoSmallestNumbers(numbers) {
     let sorted = numbers.sort((a, b) => a - b);
     return sorted[0] + sorted[1];
+    }
+
+// SOLUTION 2:
+
+function sumTwoSmallestNumbers(numbers) {
+    numbers.sort((a, b) => a - b);
+    const sum = numbers[0] + numbers[1];
+    return sum;
     }
