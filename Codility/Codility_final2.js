@@ -22,7 +22,7 @@
 
 // endpoint should accept a query parameter name which will contain a
 // string;
-// owhen parameter name is provided, all users whose name property is
+// when parameter name is provided, all users whose name property is
 // equal to the name query parameter must be returned (it may happen
 // that there will be more than one match). If no users with the given name
 // are found, an empty array must be returned.
