@@ -1,0 +1,44 @@
+.container {
+	display: grid;
+	grid-template-columns: 1fr 4fr;
+	grid-template-areas:
+		'navbar navbar'
+		'hero hero'
+		'sidebar content'
+		'footer footer';
+	height: 100vh;
+}
+
+.navbar {
+	background-color: purple;
+	grid-area: navbar;
+	height: 50px;
+}
+
+.hero {
+	background-color: pink;
+	grid-area: hero;
+	height: 80px;
+}
+
+.content {
+	background-color: red;
+	grid-area: content;
+}
+
+.sidebar {
+	background-color: lightblue;
+	grid-area: sidebar;
+	min-height: 190px;
+	width: calc(1 / 5 * (100% - 10px));
+	margin-right: 10px;
+}
+
+.footer {
+	background-color: yellow;
+	grid-area: footer;
+	height: 75px;
+	width: calc(3 / 5 * (100% - 10px));
+	margin-left: auto;
+	margin-right: auto;
+}
